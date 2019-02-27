@@ -1,0 +1,67 @@
+@import "../css/bootstrap.min.css";
+@import "../css/bootstrap-theme.min.css";
+@import "../css/owl.carousel.css";
+@import "../css/owl.theme.default.css";
+@import "../fonts/fontawesome/css/all.css";
+@import "../css/fonts.css";
+@import "../css/css-reset.css";
+
+body {
+  font-size: 10px;
+}
+
+.paragraph-text {
+  font-family: LatoRegular, Arial, sans-serif;
+  font-size: 1.6em;
+}
+
+.button {
+  font-family: RalewayMedium, Arial, sans-serif;
+  font-size: 2em;
+  padding: 15px 35px;
+  color: white;
+  text-transform: uppercase;
+}
+
+a {
+  color: inherit;
+  &:visited, &:hover, &:focus {
+    text-decoration: none;
+  }
+  &:focus {
+    color: inherit;
+  }
+}
+
+header {
+  position: relative;
+
+  nav {
+    background-color: rgba(13, 13, 13, .5);
+
+    .sizer {
+      max-width: 1170px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      color: #a4a4a4;
+      li a {
+        font-family: RalewayRegular, Arial, sans-serif;
+        font-size: 1.8em;
+        text-transform: uppercase;
+        padding: 25px 15px;
+        text-decoration: none;
+        display: block;
+        &:hover{
+          color: #ffffff;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

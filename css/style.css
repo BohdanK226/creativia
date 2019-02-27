@@ -1,0 +1,53 @@
+@import url(../css/bootstrap.min.css);
+@import url(../css/bootstrap-theme.min.css);
+@import url(../css/owl.carousel.css);
+@import url(../css/owl.theme.default.css);
+@import url(../fonts/fontawesome/css/all.css);
+@import url(../css/fonts.css);
+@import url(../css/css-reset.css);
+body {
+  font-size: 10px; }
+
+.paragraph-text {
+  font-family: LatoRegular, Arial, sans-serif;
+  font-size: 1.6em; }
+
+.button {
+  font-family: RalewayMedium, Arial, sans-serif;
+  font-size: 2em;
+  padding: 15px 35px;
+  color: white;
+  text-transform: uppercase; }
+
+a {
+  color: inherit; }
+  a:visited, a:hover, a:focus {
+    text-decoration: none; }
+  a:focus {
+    color: inherit; }
+
+header {
+  position: relative; }
+  header nav {
+    background-color: rgba(13, 13, 13, 0.5); }
+    header nav .sizer {
+      max-width: 1170px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between; }
+    header nav ul {
+      display: flex;
+      justify-content: space-between;
+      color: #a4a4a4; }
+      header nav ul li a {
+        font-family: RalewayRegular, Arial, sans-serif;
+        font-size: 1.8em;
+        text-transform: uppercase;
+        padding: 25px 15px;
+        text-decoration: none;
+        display: block; }
+        header nav ul li a:hover {
+          color: #ffffff;
+          text-decoration: none; }
+
+/*# sourceMappingURL=style.css.map */
