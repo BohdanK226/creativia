@@ -6,6 +6,12 @@
 @import "../css/fonts.css";
 @import "../css/css-reset.css";
 
+@mixin max-screen($res) {
+  @media screen and (max-width: $res) {
+    @content;
+  }
+}
+
 body {
   font-size: 10px;
 }
@@ -25,12 +31,18 @@ body {
 
 a {
   color: inherit;
+
   &:visited, &:hover, &:focus {
     text-decoration: none;
   }
+
   &:focus {
     color: inherit;
   }
+}
+
+.show-menu {
+  right: 0;
 }
 
 header {
@@ -38,18 +50,70 @@ header {
 
   nav {
     background-color: rgba(13, 13, 13, .5);
+    border-top: 3px solid #262626;
 
     .sizer {
       max-width: 1170px;
       margin: auto;
       display: flex;
       justify-content: space-between;
+      padding: 0 5px;
+    }
+
+    .logo {
+      width: 250px;
+      position: relative;
+      flex-shrink: 0;
+
+      img {
+        position: absolute;
+      }
+    }
+
+    .mobile-menu {
+      display: none;
+      font-size: 5em;
+      color: #FFFFFF;
+      line-height: 60px;
+      cursor: pointer;
+      margin-right: 8px;
+      @include max-screen(992px) {
+        display: block;
+      }
     }
 
     ul {
       display: flex;
       justify-content: space-between;
       color: #a4a4a4;
+
+      .close-icon {
+        display: none;
+      }
+
+      @include max-screen(992px) {
+        flex-direction: column;
+        justify-content: flex-start;
+        position: fixed;
+        background-color: black;
+        padding: 10px 60px;
+        right: -320px;
+        top: 0;
+        height: 100vh;
+        transition: right .5s ease-in-out;
+        overflow-y: auto;
+        .close-icon {
+          display: block;
+          position: absolute;
+          top: 10px;
+          left: 20px;
+          font-size: 3em;
+          color: #FFFFFF;
+          padding: 5px;
+          cursor: pointer;
+        }
+      }
+
       li a {
         font-family: RalewayRegular, Arial, sans-serif;
         font-size: 1.8em;
@@ -57,9 +121,50 @@ header {
         padding: 25px 15px;
         text-decoration: none;
         display: block;
-        &:hover{
+        position: relative;
+
+        @include max-screen(1080px) {
+          padding: 20px 9px;
+        }
+
+        &:hover {
           color: #ffffff;
           text-decoration: none;
+
+          &:before, &:after {
+            content: '';
+            display: block;
+            height: 3px;
+            width: 27px;
+            background-color: #ff0036;
+            top: -3px;
+            left: 50%;
+            margin-left: -13.5px;
+            position: absolute;
+          }
+
+          &:after {
+            top: auto;
+            bottom: 0;
+            height: 2px;
+          }
+        }
+
+        @include max-screen(992px) {
+          padding: 20px 30px;
+          &:hover {
+            &:before, &:after {
+              width: 100%;
+              top: -3px;
+              left: 0;
+              margin-left: 0;
+            }
+
+            &:after {
+              top: auto;
+              bottom: 0;
+            }
+          }
         }
       }
     }

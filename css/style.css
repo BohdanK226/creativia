@@ -26,28 +26,101 @@ a {
   a:focus {
     color: inherit; }
 
+.show-menu {
+  right: 0; }
+
 header {
   position: relative; }
   header nav {
-    background-color: rgba(13, 13, 13, 0.5); }
+    background-color: rgba(13, 13, 13, 0.5);
+    border-top: 3px solid #262626; }
     header nav .sizer {
       max-width: 1170px;
       margin: auto;
       display: flex;
-      justify-content: space-between; }
+      justify-content: space-between;
+      padding: 0 5px; }
+    header nav .logo {
+      width: 250px;
+      position: relative;
+      flex-shrink: 0; }
+      header nav .logo img {
+        position: absolute; }
+    header nav .mobile-menu {
+      display: none;
+      font-size: 5em;
+      color: #FFFFFF;
+      line-height: 60px;
+      cursor: pointer;
+      margin-right: 8px; }
+      @media screen and (max-width: 992px) {
+        header nav .mobile-menu {
+          display: block; } }
     header nav ul {
       display: flex;
       justify-content: space-between;
       color: #a4a4a4; }
+      header nav ul .close-icon {
+        display: none; }
+      @media screen and (max-width: 992px) {
+        header nav ul {
+          flex-direction: column;
+          justify-content: flex-start;
+          position: fixed;
+          background-color: black;
+          padding: 10px 60px;
+          right: -320px;
+          top: 0;
+          height: 100vh;
+          transition: right .5s ease-in-out;
+          overflow-y: auto; }
+          header nav ul .close-icon {
+            display: block;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-size: 3em;
+            color: #FFFFFF;
+            padding: 5px;
+            cursor: pointer; } }
       header nav ul li a {
         font-family: RalewayRegular, Arial, sans-serif;
         font-size: 1.8em;
         text-transform: uppercase;
         padding: 25px 15px;
         text-decoration: none;
-        display: block; }
+        display: block;
+        position: relative; }
+        @media screen and (max-width: 1080px) {
+          header nav ul li a {
+            padding: 20px 9px; } }
         header nav ul li a:hover {
           color: #ffffff;
           text-decoration: none; }
+          header nav ul li a:hover:before, header nav ul li a:hover:after {
+            content: '';
+            display: block;
+            height: 3px;
+            width: 27px;
+            background-color: #ff0036;
+            top: -3px;
+            left: 50%;
+            margin-left: -13.5px;
+            position: absolute; }
+          header nav ul li a:hover:after {
+            top: auto;
+            bottom: 0;
+            height: 2px; }
+        @media screen and (max-width: 992px) {
+          header nav ul li a {
+            padding: 20px 30px; }
+            header nav ul li a:hover:before, header nav ul li a:hover:after {
+              width: 100%;
+              top: -3px;
+              left: 0;
+              margin-left: 0; }
+            header nav ul li a:hover:after {
+              top: auto;
+              bottom: 0; } }
 
 /*# sourceMappingURL=style.css.map */
