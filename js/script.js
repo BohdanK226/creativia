@@ -1,11 +1,14 @@
 $(document).ready(function () {
     // $(".owl-carousel").owlCarousel({
-    //         loop: true,
+    //         loop: false,
     //         margin: 10,
     //         nav: true,
     //         items: 1,
     //         mouseDrag: false,
-    //         smartSpeed: 1000
+    //         smartSpeed: 700,
+    //         autoplay: false,
+    //     autoplayTimeout:3000,
+    //     rewind: true
     //     }
     // );
 
@@ -28,10 +31,8 @@ $(document).ready(function () {
     $(window).resize(function () {
         if (mobile_menu.hasClass('show-menu')) {
             mobile_menu.removeClass('show-menu');
-    }
-    })
-
-    $('.carousel').carousel();
+        }
+    });
 
 //**********************************************************
 });
