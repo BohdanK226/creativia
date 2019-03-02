@@ -33,6 +33,80 @@ body {
 .button.red {
   background-color: #ff0036; }
 
+.hex-small,
+.hexagon-inside {
+  position: relative;
+  width: 46px;
+  height: 80px;
+  background-color: black; }
+
+.hex-small {
+  margin: auto; }
+
+.hex-small:before,
+.hex-small:after,
+.hexagon-inside:before,
+.hexagon-inside:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black; }
+
+.hex-small:before,
+.hexagon-inside:before {
+  transform: rotate(-120deg); }
+
+.hex-small:after,
+.hexagon-inside:after {
+  transform: rotate(120deg); }
+
+.hexagon-inside {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: scale(0.95);
+  background-color: #fff;
+  z-index: 1; }
+
+.hexagon-inside:before,
+.hexagon-inside:after {
+  background-color: white; }
+
+.hexagon-text {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 32px;
+  z-index: 1;
+  pointer-events: none;
+  color: black; }
+
+.after-line:after {
+  content: '';
+  height: 1px;
+  width: 500px;
+  background-color: #262626;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -250px; }
+  @media screen and (max-width: 575px) {
+    .after-line:after {
+      width: 260px;
+      margin-left: -130px; } }
+.after-line:before {
+  content: url("../images/hex.png");
+  position: absolute;
+  bottom: -11px;
+  left: 50%;
+  margin-left: -11px; }
+
 a {
   color: inherit; }
   a:visited, a:hover, a:focus {
@@ -390,71 +464,6 @@ section.about {
       section.about .half {
         margin-bottom: 60px;
         padding-bottom: 30px; } }
-    section.about .half:after {
-      content: '';
-      height: 1px;
-      width: 500px;
-      background-color: #262626;
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      margin-left: -250px; }
-      @media screen and (max-width: 575px) {
-        section.about .half:after {
-          width: 260px;
-          margin-left: -130px; } }
-    section.about .half:before {
-      content: url("../images/hex.png");
-      position: absolute;
-      bottom: -11px;
-      left: 50%;
-      margin-left: -11px; }
-  section.about .hex-menu .hex-small,
-  section.about .hex-menu .hexagon-inside {
-    position: relative;
-    width: 46px;
-    height: 80px;
-    background-color: black; }
-  section.about .hex-menu .hex-small {
-    margin: auto; }
-  section.about .hex-menu .hex-small:before,
-  section.about .hex-menu .hex-small:after,
-  section.about .hex-menu .hexagon-inside:before,
-  section.about .hex-menu .hexagon-inside:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: black; }
-  section.about .hex-menu .hex-small:before,
-  section.about .hex-menu .hexagon-inside:before {
-    transform: rotate(-120deg); }
-  section.about .hex-menu .hex-small:after,
-  section.about .hex-menu .hexagon-inside:after {
-    transform: rotate(120deg); }
-  section.about .hex-menu .hexagon-inside {
-    position: absolute;
-    left: 0;
-    top: 0;
-    transform: scale(0.95);
-    background-color: #fff;
-    z-index: 1; }
-  section.about .hex-menu .hexagon-inside:before,
-  section.about .hex-menu .hexagon-inside:after {
-    background-color: white; }
-  section.about .hex-menu .hexagon-text {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    font-size: 32px;
-    z-index: 1;
-    pointer-events: none;
-    color: black; }
   section.about .hex-menu .hex-small:hover .hexagon-inside:before,
   section.about .hex-menu .hex-small:hover .hexagon-inside:after,
   section.about .hex-menu .hex-small:hover:after,
@@ -468,5 +477,97 @@ section.about {
     margin: 35px 0; }
   section.about .hex-menu p {
     text-align: center; }
+
+.portfolio {
+  position: relative;
+  background-color: #2a2a2a;
+  padding: 100px 0; }
+  .portfolio .container-fluid {
+    max-width: 1920px; }
+  .portfolio h2 {
+    color: white;
+    font-family: RalewayMedium, Arial, sans-serif;
+    font-size: 3em;
+    margin-bottom: 25px;
+    text-align: center; }
+  .portfolio ul {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px; }
+    @media screen and (max-width: 575px) {
+      .portfolio ul {
+        flex-direction: column;
+        align-items: center; }
+        .portfolio ul li {
+          margin-bottom: 10px; } }
+    .portfolio ul li {
+      padding: 0 10px; }
+      .portfolio ul li a {
+        text-transform: uppercase;
+        font-family: LatoBold, Arial, sans-serif;
+        font-size: 1.6em;
+        color: #a2a2a2; }
+        .portfolio ul li a:hover {
+          color: #ff0036; }
+  .portfolio .row > div {
+    height: 350px;
+    background: no-repeat center right;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: relative;
+    background-size: 80%; }
+    .portfolio .row > div:hover:before {
+      content: "\f067";
+      font-family: "Font Awesome 5 Pro";
+      font-weight: 600;
+      color: white;
+      font-size: 40px;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      top: 0;
+      left: 0;
+      z-index: 1; }
+    .portfolio .row > div:hover:after {
+      content: 'design name';
+      color: white;
+      font-family: LatoRegular, Arial, sans-serif;
+      font-size: 16px;
+      position: relative;
+      z-index: 2;
+      margin-bottom: -60px; }
+    .portfolio .row > div a {
+      font-size: 40px; }
+      .portfolio .row > div a:hover {
+        color: inherit; }
+  .portfolio .row-1 > div:nth-child(1) {
+    background-color: #dd984b; }
+  .portfolio .row-1 > div:nth-child(2) {
+    background-color: #5681a7; }
+  .portfolio .row-1 > div:nth-child(3) {
+    background-color: #d15d85; }
+  .portfolio .row-1 > div:nth-child(4) {
+    background-color: #f4f0e0; }
+  .portfolio .row-2 > div:nth-child(1) {
+    background-color: #85cb85; }
+  .portfolio .row-2 > div:nth-child(2) {
+    background-color: #98a3a3; }
+  .portfolio .row-2 > div:nth-child(3) {
+    background-color: #67aec7; }
+  .portfolio .row-2 > div:nth-child(4) {
+    background-color: #e08464; }
+
+.portfolio.after-line:after {
+  background-color: #ff0036; }
+.portfolio.after-line:before {
+  content: url(../images/hex-red.png); }
 
 /*# sourceMappingURL=style.css.map */
