@@ -9,10 +9,23 @@ $(document).ready(function () {
             mouseDrag: false,
             smartSpeed: 1500,
             autoplay: true,
-        autoplayTimeout: 3000
+            autoplayTimeout: 3000
         }
     );
 
+    $(".clients .owl-carousel").owlCarousel({
+            loop: true,
+            margin: 0,
+            nav: true,
+            dots: true,
+            navText: "",
+            items: 1,
+            mouseDrag: true,
+            smartSpeed: 1500,
+            autoplay: true,
+            autoplayTimeout: 993000
+        }
+    );
 
     //********** -- mobile menu behaviour --------
 

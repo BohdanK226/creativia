@@ -9,11 +9,11 @@
 body {
   font-size: 10px; }
 
-.paragraph-text, header .slider .carousel-inner .item p, section.about h3, section.about .panel-group .panel .panel-body, .our-products h3 {
+.paragraph-text, header .slider .carousel-inner .item p, section.about h3, section.about .panel-group .panel .panel-body, .our-products h3, .clients h3 {
   font-family: LatoRegular, Arial, sans-serif;
   font-size: 1.6em;
   line-height: 1.6em; }
-  .paragraph-text span, header .slider .carousel-inner .item p span, section.about h3 span, section.about .panel-group .panel .panel-body span, .our-products h3 span {
+  .paragraph-text span, header .slider .carousel-inner .item p span, section.about h3 span, section.about .panel-group .panel .panel-body span, .our-products h3 span, .clients h3 span {
     color: #ff0036; }
 
 .title, section.about h2 {
@@ -117,6 +117,27 @@ a {
 
 .show-menu {
   right: 0; }
+
+.hexagon {
+  position: relative;
+  width: 390px;
+  height: 330px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-clip-path: polygon(0 50%, 25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%);
+  clip-path: polygon(0 50%, 25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%); }
+  .hexagon:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(25% 0, 27% 0, 2% 50%, 27% 100%, 25% 100%, 0 50%, 25% 0, 75% 0, 100% 50%, 75% 100%, 73% 100%, 98% 50%, 73% 0);
+    -webkit-clip-path: polygon(25% 0, 27% 0, 2% 50%, 27% 100%, 25% 100%, 0 50%, 25% 0, 75% 0, 100% 50%, 75% 100%, 73% 100%, 98% 50%, 73% 0);
+    background-color: white; }
 
 header {
   position: relative; }
@@ -437,26 +458,6 @@ section.about {
     z-index: 1;
     opacity: .5;
     filter: brightness(50%); } }
-  section.about .hexagon {
-    position: relative;
-    width: 390px;
-    height: 330px;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    -webkit-clip-path: polygon(0 50%, 25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%);
-    clip-path: polygon(0 50%, 25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%); }
-    section.about .hexagon:before {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      clip-path: polygon(25% 0, 27% 0, 2% 50%, 27% 100%, 25% 100%, 0 50%, 25% 0, 75% 0, 100% 50%, 75% 100%, 73% 100%, 98% 50%, 73% 0);
-      -webkit-clip-path: polygon(25% 0, 27% 0, 2% 50%, 27% 100%, 25% 100%, 0 50%, 25% 0, 75% 0, 100% 50%, 75% 100%, 73% 100%, 98% 50%, 73% 0);
-      background-color: white; }
   section.about .half {
     padding-bottom: 100px;
     margin-bottom: 100px;
@@ -703,5 +704,85 @@ section.about {
         height: 69.5%;
         left: 17%;
         top: 21%; }
+
+.clients.after-line:after {
+  background-color: #ff0036; }
+.clients.after-line:before {
+  content: url(../images/hex-red.png); }
+
+.clients {
+  position: relative;
+  padding: 100px 0;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../images/clients-bg.jpg") no-repeat top center;
+  background-size: cover;
+  color: #a4a4a4; }
+  .clients h2 {
+    text-align: center;
+    color: white; }
+  .clients h3 {
+    text-align: center;
+    font-family: LatoBold, Arial, sans-serif;
+    margin-bottom: 100px; }
+    .clients h3 span {
+      color: #ff0036; }
+  .clients h4 {
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    font-family: RalewayMedium, Arial, sans-serif;
+    font-size: 2em;
+    margin-bottom: 50px; }
+  .clients .clients-slider p {
+    text-align: center;
+    font-family: LatoBold, Arial, sans-serif;
+    margin-bottom: 50px;
+    font-size: 1.6em;
+    line-height: 1.6em; }
+  .clients .clients-slider .hexagon {
+    height: 60px;
+    width: 70px;
+    margin: auto auto 15px auto; }
+    .clients .clients-slider .hexagon:before {
+      display: none; }
+  .clients .clients-slider h5 {
+    margin-bottom: 25px;
+    font-family: RalewayBold, Arial, sans-serif;
+    font-size: 1.6em;
+    color: #ff0036;
+    text-align: center;
+    text-transform: uppercase; }
+  .clients .owl-dots {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%; }
+    .clients .owl-dots .owl-dot {
+      height: 6px;
+      width: 6px;
+      background-color: white;
+      margin: 0 2.5px;
+      outline: none; }
+    .clients .owl-dots .owl-dot.active {
+      background-color: #ff0036; }
+  .clients .square {
+    background-color: #efefef;
+    color: #292626;
+    font-family: MgOpenModata, Arial, sans-serif;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto auto 35px auto;
+    height: 115px;
+    max-width: 340px;
+    -webkit-box-shadow: inset -22px -12px 136px -24px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset -22px -12px 136px -24px rgba(0, 0, 0, 0.75);
+    box-shadow: inset -22px -12px 136px -24px rgba(0, 0, 0, 0.75); }
+    @media screen and (max-width: 991px) {
+      .clients .square {
+        margin: 35px auto 0 auto; } }
+    .clients .square img {
+      margin-right: 10px; }
 
 /*# sourceMappingURL=style.css.map */

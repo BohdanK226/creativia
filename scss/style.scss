@@ -153,6 +153,30 @@ a {
   right: 0;
 }
 
+.hexagon {
+  position: relative;
+  width: 390px;
+  height: 330px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-clip-path: polygon(0 50%, 25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%);
+  clip-path: polygon(0 50%, 25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%);
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(25% 0, 27% 0, 2% 50%, 27% 100%, 25% 100%, 0 50%, 25% 0, 75% 0, 100% 50%, 75% 100%, 73% 100%, 98% 50%, 73% 0);
+    -webkit-clip-path: polygon(25% 0, 27% 0, 2% 50%, 27% 100%, 25% 100%, 0 50%, 25% 0, 75% 0, 100% 50%, 75% 100%, 73% 100%, 98% 50%, 73% 0);
+    background-color: white;
+  }
+}
+
 header {
   position: relative;
 
@@ -606,30 +630,6 @@ section.about {
     }
   }
 
-  .hexagon {
-    position: relative;
-    width: 390px;
-    height: 330px;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    -webkit-clip-path: polygon(0 50%, 25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%);
-    clip-path: polygon(0 50%, 25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%);
-
-    &:before {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      clip-path: polygon(25% 0, 27% 0, 2% 50%, 27% 100%, 25% 100%, 0 50%, 25% 0, 75% 0, 100% 50%, 75% 100%, 73% 100%, 98% 50%, 73% 0);
-      -webkit-clip-path: polygon(25% 0, 27% 0, 2% 50%, 27% 100%, 25% 100%, 0 50%, 25% 0, 75% 0, 100% 50%, 75% 100%, 73% 100%, 98% 50%, 73% 0);
-      background-color: white;
-    }
-  }
-
   .half {
     padding-bottom: 100px;
     margin-bottom: 100px;
@@ -924,20 +924,23 @@ section.about {
       }
     }
   }
-    .ipad-slider {
-      position: relative;
-      @include max-screen(768px) {
-        max-width: 360px;
-        margin: auto;
-      }
+
+  .ipad-slider {
+    position: relative;
+    @include max-screen(768px) {
+      max-width: 360px;
+      margin: auto;
     }
+  }
+
   .ipad-slider .owl-carousel {
     .owl-stage-outer {
       height: 490px;
       position: relative;
       background: url("../images/ipad.png") top center no-repeat;
       background-size: contain;
-      &:after{
+
+      &:after {
         content: 'Free PSD';
         width: 140px;
         line-height: 40px;
@@ -953,31 +956,35 @@ section.about {
         z-index: 2;
         cursor: pointer;
       }
-      @media screen and (max-width:1200px) and (min-width: 991px) {
+
+      @media screen and (max-width: 1200px) and (min-width: 991px) {
         &:after {
           bottom: 30%;
         }
       }
 
-      @include max-screen(420px){
-        &:after{
+      @include max-screen(420px) {
+        &:after {
           bottom: 20%;
         }
       }
-      @include max-screen(350px){
-        &:after{
+      @include max-screen(350px) {
+        &:after {
           bottom: 30%;
         }
       }
+
       .owl-item {
         position: relative;
         height: 490px;
       }
+
       .photo-wrapper {
         overflow: hidden;
         position: relative;
         width: 100%;
         padding-bottom: 100%;
+
         .item-photo {
           position: absolute;
           border-top: 3px solid #434343;
@@ -992,6 +999,122 @@ section.about {
         }
       }
 
+    }
+  }
+}
+
+.clients.after-line {
+  &:after {
+    background-color: #ff0036;
+  }
+
+  &:before {
+    content: url(../images/hex-red.png);
+  }
+}
+
+.clients {
+  position: relative;
+  padding: 100px 0;
+  background: linear-gradient(to left, rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url("../images/clients-bg.jpg") no-repeat top center;
+  background-size: cover;
+  color: #a4a4a4;
+
+  h2 {
+    text-align: center;
+    color: white;
+  }
+
+  h3 {
+    @extend .paragraph-text;
+    text-align: center;
+    font-family: LatoBold, Arial, sans-serif;
+
+    span {
+      color: #ff0036;
+    }
+
+    margin-bottom: 100px;
+  }
+
+  h4 {
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    font-family: RalewayMedium, Arial, sans-serif;
+    font-size: 2em;
+    margin-bottom: 50px;
+  }
+
+  .clients-slider {
+    p {
+      text-align: center;
+      font-family: LatoBold, Arial, sans-serif;
+      margin-bottom: 50px;
+      font-size: 1.6em;
+      line-height: 1.6em;
+    }
+
+    .hexagon {
+      height: 60px;
+      width: 70px;
+      margin: auto auto 15px auto;
+
+      &:before {
+        display: none;
+      }
+    }
+
+    h5 {
+      margin-bottom: 25px;
+      font-family: RalewayBold, Arial, sans-serif;
+      font-size: 1.6em;
+      color: #ff0036;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+
+  .owl-dots {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    .owl-dot {
+      height: 6px;
+      width: 6px;
+      background-color: white;
+      margin: 0 2.5px;
+      outline: none;
+    }
+
+    .owl-dot.active {
+      background-color: #ff0036;
+    }
+  }
+
+  .square {
+    background-color: #efefef;
+    color: #292626;
+    font-family: MgOpenModata, Arial, sans-serif;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto auto 35px auto;
+    height: 115px;
+    max-width: 340px;
+    -webkit-box-shadow: inset -22px -12px 136px -24px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset -22px -12px 136px -24px rgba(0, 0, 0, 0.75);
+    box-shadow: inset -22px -12px 136px -24px rgba(0, 0, 0, 0.75);
+    @include max-screen(991px) {
+      margin: 35px auto 0 auto;
+    }
+
+    img {
+      margin-right: 10px;
     }
   }
 }
