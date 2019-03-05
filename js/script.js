@@ -1,16 +1,17 @@
 $(document).ready(function () {
-    // $(".owl-carousel").owlCarousel({
-    //         loop: false,
-    //         margin: 10,
-    //         nav: true,
-    //         items: 1,
-    //         mouseDrag: false,
-    //         smartSpeed: 700,
-    //         autoplay: false,
-    //     autoplayTimeout:3000,
-    //     rewind: true
-    //     }
-    // );
+    $(".ipad-slider .owl-carousel").owlCarousel({
+            animateIn: 'fadeIn',
+            animateOut: 'fadeOutRight',
+            loop: true,
+            margin: 0,
+            nav: false,
+            items: 1,
+            mouseDrag: false,
+            smartSpeed: 1500,
+            autoplay: true,
+        autoplayTimeout: 3000
+        }
+    );
 
 
     //********** -- mobile menu behaviour --------
