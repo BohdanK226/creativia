@@ -1351,3 +1351,32 @@ section.about {
     }
   }
 }
+
+.twitter.after-line {
+  &:after{
+    background-color: #ff0036;
+  }
+  &:before {
+    content: url(../images/hex-red.png);
+  }
+}
+
+.twitter {
+  position: relative;
+  padding: 100px 0;
+  background: #272727 url("../images/twitter1.png") 10% bottom no-repeat;
+  background-size: 220px;
+  a {
+    display: block;
+    color: #ff0036;
+    font-size: 90px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  p {
+    color: white;
+    max-width: 650px;
+    margin: auto;
+    text-align: center;
+  }
+}
