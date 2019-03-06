@@ -32,6 +32,7 @@ body {
   font-size: 3em;
   margin-bottom: 40px;
   text-align: center;
+
   span {
     color: #ff0036;
   }
@@ -1109,11 +1110,13 @@ section.about {
 .team {
   position: relative;
   padding: 100px 0;
-  .row>div {
+
+  .row > div {
     .wrapper {
       max-width: 270px;
       margin: auto auto 15px auto;
     }
+
     .photo {
       height: 240px;
       background: #262626 center center no-repeat;
@@ -1121,6 +1124,7 @@ section.about {
       display: flex;
       justify-content: center;
       align-items: center;
+
       .hexagon {
         display: flex;
         visibility: hidden;
@@ -1133,39 +1137,45 @@ section.about {
         justify-content: center;
         align-items: center;
         margin: 0 5px;
+
         &:before {
           display: none;
         }
       }
     }
+
     h4 {
-       border: 1px solid #e7e7e7;
-       color: #262626;
-       font-family: RalewayMedium, Arial, sans-serif;
-       font-size: 2em;
-       text-transform: uppercase;
-       padding: 30px;
-       text-align: center;
+      border: 1px solid #e7e7e7;
+      color: #262626;
+      font-family: RalewayMedium, Arial, sans-serif;
+      font-size: 2em;
+      text-transform: uppercase;
+      padding: 30px;
+      text-align: center;
       transition: all .5s ease-in-out;
-       span {
-         @extend .paragraph-text;
-         display: block;
-         margin-top: 20px;
-         font-size: 16px;
-         text-transform: none;
-         color: #505050;
-       }
-     }
+
+      span {
+        @extend .paragraph-text;
+        display: block;
+        margin-top: 20px;
+        font-size: 16px;
+        text-transform: none;
+        color: #505050;
+      }
+    }
+
     &:hover {
       .photo {
-        background-image: none!important;
+        background-image: none !important;
         transition: all 1s ease-in-out;
+
         .hexagon {
           visibility: visible;
           opacity: 1;
           transition: opacity .5s ease-in-out;
         }
       }
+
       h4 {
         color: #ff0036;
         border: 1px solid #262626;
@@ -1176,6 +1186,7 @@ section.about {
 
 .skills {
   padding: 100px 0;
+
   .circle {
     position: relative;
     display: flex;
@@ -1184,18 +1195,22 @@ section.about {
     font-size: 4em;
     font-family: LatoLight, Arial, sans-serif;
     color: #ff0036;
+
     strong {
       position: absolute;
       top: 38%;
       left: 50%;
       margin-left: -33px;
+
       i {
         color: black;
       }
     }
   }
-  .row>div {
+
+  .row > div {
     margin-bottom: 15px;
+
     h4 {
       font-family: RalewayMedium, Arial, sans-serif;
       font-size: 2em;
@@ -1204,11 +1219,84 @@ section.about {
       text-align: center;
       text-transform: uppercase;
     }
+
     .paragraph-text {
       text-align: center;
       max-width: 160px;
       margin: auto;
       color: #505050;
+    }
+  }
+}
+
+.services.after-line {
+  &:after{
+    background-color: #ff0036;
+  }
+  &:before {
+    content: url(../images/hex-red.png);
+  }
+}
+.services {
+  position: relative;
+  padding: 100px 0;
+  background-color: #272727;
+  color: #a4a4a4;
+
+  .row > div {
+    margin-bottom: 50px;
+
+    h2 {
+      color: white;
+    }
+
+    h3 {
+      color: inherit;
+    }
+
+    p {
+      text-align: justify;
+      background-color: #343434;
+      padding: 30px 35px;
+      transition: all .5s ease-in-out;
+    }
+
+    .wrapper {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      font-family: RalewayMedium, Arial, sans-serif;
+      font-size: 2em;
+      color: white;
+      margin-bottom: 25px;
+      text-transform: uppercase;
+
+      .hexagon {
+        margin-right: 15px;
+        width: 65px;
+        height: 55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        font-size: 30px;
+        &:before {
+          display: none;
+        }
+
+        background-color: #a4a4a4;
+        transition: all .5s ease-in-out;
+      }
+    }
+    &:hover{
+      p {
+        background-color: #3d2329;
+        color: white;
+      }
+      .wrapper .hexagon {
+        background-color: #ff0036;
+        color: white;
+      }
     }
   }
 }

@@ -868,4 +868,54 @@ section.about {
       margin: auto;
       color: #505050; }
 
+.services.after-line:after {
+  background-color: #ff0036; }
+.services.after-line:before {
+  content: url(../images/hex-red.png); }
+
+.services {
+  position: relative;
+  padding: 100px 0;
+  background-color: #272727;
+  color: #a4a4a4; }
+  .services .row > div {
+    margin-bottom: 50px; }
+    .services .row > div h2 {
+      color: white; }
+    .services .row > div h3 {
+      color: inherit; }
+    .services .row > div p {
+      text-align: justify;
+      background-color: #343434;
+      padding: 30px 35px;
+      transition: all .5s ease-in-out; }
+    .services .row > div .wrapper {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      font-family: RalewayMedium, Arial, sans-serif;
+      font-size: 2em;
+      color: white;
+      margin-bottom: 25px;
+      text-transform: uppercase; }
+      .services .row > div .wrapper .hexagon {
+        margin-right: 15px;
+        width: 65px;
+        height: 55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        font-size: 30px;
+        background-color: #a4a4a4;
+        transition: all .5s ease-in-out; }
+        .services .row > div .wrapper .hexagon:before {
+          display: none; }
+    .services .row > div:hover p {
+      background-color: #3d2329;
+      color: white; }
+    .services .row > div:hover .wrapper .hexagon {
+      background-color: #ff0036;
+      color: white; }
+
 /*# sourceMappingURL=style.css.map */
