@@ -786,6 +786,9 @@ section.about {
 .team {
   position: relative;
   padding: 100px 0; }
+  .team .row > div .wrapper {
+    max-width: 270px;
+    margin: auto auto 15px auto; }
   .team .row > div .photo {
     height: 240px;
     background: #262626 center center no-repeat;
@@ -832,5 +835,37 @@ section.about {
   .team .row > div:hover h4 {
     color: #ff0036;
     border: 1px solid #262626; }
+
+.skills {
+  padding: 100px 0; }
+  .skills .circle {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4em;
+    font-family: LatoLight, Arial, sans-serif;
+    color: #ff0036; }
+    .skills .circle strong {
+      position: absolute;
+      top: 38%;
+      left: 50%;
+      margin-left: -33px; }
+      .skills .circle strong i {
+        color: black; }
+  .skills .row > div {
+    margin-bottom: 15px; }
+    .skills .row > div h4 {
+      font-family: RalewayMedium, Arial, sans-serif;
+      font-size: 2em;
+      color: #262626;
+      padding: 25px 0;
+      text-align: center;
+      text-transform: uppercase; }
+    .skills .row > div .paragraph-text, .skills .row > div header .slider .carousel-inner .item p, header .slider .carousel-inner .item .skills .row > div p, .skills .row > div section.about .panel-group .panel .panel-body, section.about .panel-group .panel .skills .row > div .panel-body, .skills .team .row > div h4 span, .team .skills .row > div h4 span {
+      text-align: center;
+      max-width: 160px;
+      margin: auto;
+      color: #505050; }
 
 /*# sourceMappingURL=style.css.map */
