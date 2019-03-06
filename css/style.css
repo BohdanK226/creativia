@@ -9,11 +9,11 @@
 body {
   font-size: 10px; }
 
-.paragraph-text, header .slider .carousel-inner .item p, section.about .panel-group .panel .panel-body, .team .row > div h4 span {
+.paragraph-text, header .slider .carousel-inner .item p, section.about .panel-group .panel .panel-body, .team .row > div h4 span, .plans .row > div ul li {
   font-family: LatoRegular, Arial, sans-serif;
   font-size: 1.6em;
   line-height: 1.6em; }
-  .paragraph-text span, header .slider .carousel-inner .item p span, section.about .panel-group .panel .panel-body span, .team .row > div h4 span span {
+  .paragraph-text span, header .slider .carousel-inner .item p span, section.about .panel-group .panel .panel-body span, .team .row > div h4 span span, .plans .row > div ul li span {
     color: #ff0036; }
 
 .title, section.about h2 {
@@ -862,7 +862,7 @@ section.about {
       padding: 25px 0;
       text-align: center;
       text-transform: uppercase; }
-    .skills .row > div .paragraph-text, .skills .row > div header .slider .carousel-inner .item p, header .slider .carousel-inner .item .skills .row > div p, .skills .row > div section.about .panel-group .panel .panel-body, section.about .panel-group .panel .skills .row > div .panel-body, .skills .team .row > div h4 span, .team .skills .row > div h4 span {
+    .skills .row > div .paragraph-text, .skills .row > div header .slider .carousel-inner .item p, header .slider .carousel-inner .item .skills .row > div p, .skills .row > div section.about .panel-group .panel .panel-body, section.about .panel-group .panel .skills .row > div .panel-body, .skills .team .row > div h4 span, .team .skills .row > div h4 span, .skills .plans .row > div ul li, .plans .skills .row > div ul li {
       text-align: center;
       max-width: 160px;
       margin: auto;
@@ -917,5 +917,45 @@ section.about {
     .services .row > div:hover .wrapper .hexagon {
       background-color: #ff0036;
       color: white; }
+
+.plans {
+  padding: 100px 0; }
+  .plans .row > div {
+    margin-bottom: 15px; }
+    .plans .row > div:hover ul li:nth-child(2),
+    .plans .row > div:hover ul li:last-child a {
+      background-color: #ff0036;
+      color: white; }
+    .plans .row > div ul li {
+      padding: 15px;
+      text-align: center;
+      border-left: 1px solid #e7e7e7;
+      border-right: 1px solid #e7e7e7;
+      border-bottom: 1px solid #e7e7e7;
+      transition: all .3s ease-in-out; }
+      .plans .row > div ul li:first-child {
+        background-color: black;
+        color: white;
+        text-transform: uppercase;
+        font-family: RalewayMedium, Arial, sans-serif;
+        font-size: 2em;
+        border-bottom: none; }
+      .plans .row > div ul li:nth-child(2) {
+        font-family: LatoBlack, Arial, sans-serif;
+        font-size: 5em;
+        color: #262626;
+        background-color: #f2f2f2; }
+        .plans .row > div ul li:nth-child(2) sub {
+          font-family: LatoRegular, Arial, sans-serif;
+          font-size: 16px; }
+      .plans .row > div ul li:last-child a {
+        font-family: RalewayRegular, Arial, sans-serif;
+        font-size: 18px;
+        color: white;
+        display: block;
+        background-color: black;
+        padding: 10px 0;
+        text-transform: uppercase;
+        transition: all .3s ease-in-out; }
 
 /*# sourceMappingURL=style.css.map */

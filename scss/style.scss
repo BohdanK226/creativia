@@ -1300,3 +1300,54 @@ section.about {
     }
   }
 }
+
+.plans {
+  padding: 100px 0;
+  .row>div {
+    margin-bottom: 15px;
+    &:hover {
+      ul li:nth-child(2),
+      ul li:last-child a {
+        background-color: #ff0036;
+        color: white;
+      }
+    }
+    ul li {
+      padding: 15px;
+      text-align: center;
+      @extend .paragraph-text;
+      border-left: 1px solid #e7e7e7;
+      border-right: 1px solid #e7e7e7;
+      border-bottom: 1px solid #e7e7e7;
+      transition: all .3s ease-in-out;
+      &:first-child {
+        background-color: black;
+        color: white;
+        text-transform: uppercase;
+        font-family: RalewayMedium, Arial, sans-serif;
+        font-size: 2em;
+        border-bottom: none;
+      }
+      &:nth-child(2) {
+        font-family: LatoBlack, Arial, sans-serif;
+        font-size: 5em;
+        color: #262626;
+        background-color: #f2f2f2;
+        sub {
+          font-family: LatoRegular, Arial, sans-serif;
+          font-size: 16px;
+        }
+      }
+      &:last-child a {
+        font-family: RalewayRegular, Arial, sans-serif;
+        font-size: 18px;
+        color: white;
+        display: block;
+        background-color: black;
+        padding: 10px 0;
+        text-transform: uppercase;
+        transition: all .3s ease-in-out;
+      }
+    }
+  }
+}
