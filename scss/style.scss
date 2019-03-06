@@ -1435,6 +1435,10 @@ section.about {
       height: 200px;
       background: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)) no-repeat right bottom, #56ca7f url("../images/art-bg-1.png") right bottom no-repeat;
       background-size: 65%;
+      @include max-screen(767px) {
+        max-width: 370px;
+        margin: auto auto 20px auto;
+      }
     }
 
     .article {
