@@ -31,6 +31,19 @@ body {
   font-family: RalewayBold, Arial, sans-serif;
   font-size: 3em;
   margin-bottom: 40px;
+  text-align: center;
+  span {
+    color: #ff0036;
+  }
+}
+
+.sub-titile {
+  font-family: LatoBold, Arial, sans-serif;
+  text-align: center;
+  margin-bottom: 100px;
+  font-size: 1.6em;
+  line-height: 1.6em;
+  color: #505050;
 
   span {
     color: #ff0036;
@@ -382,13 +395,6 @@ section.about {
   h2 {
     @extend .title;
     text-align: center;
-  }
-
-  h3 {
-    @extend .paragraph-text;
-    font-family: LatoBold, Arial, sans-serif;
-    text-align: center;
-    margin-bottom: 100px;
   }
 
   p {
@@ -819,17 +825,6 @@ section.about {
     text-align: center;
   }
 
-  h3 {
-    @extend .paragraph-text;
-    text-align: center;
-
-    span {
-      color: #ff0036;
-    }
-
-    margin-bottom: 100px;
-  }
-
   .red-list {
     display: flex;
     flex-direction: column;
@@ -1025,16 +1020,8 @@ section.about {
     color: white;
   }
 
-  h3 {
-    @extend .paragraph-text;
-    text-align: center;
-    font-family: LatoBold, Arial, sans-serif;
-
-    span {
-      color: #ff0036;
-    }
-
-    margin-bottom: 100px;
+  .sub-titile {
+    color: #a4a4a4;
   }
 
   h4 {
@@ -1115,6 +1102,70 @@ section.about {
 
     img {
       margin-right: 10px;
+    }
+  }
+}
+
+.team {
+  position: relative;
+  padding: 100px 0;
+  .row>div {
+    .photo {
+      height: 240px;
+      background: #262626 center center no-repeat;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .hexagon {
+        display: flex;
+        visibility: hidden;
+        opacity: 0;
+        width: 45px;
+        height: 40px;
+        background-color: white;
+        color: #ff0036;
+        font-size: 20px;
+        justify-content: center;
+        align-items: center;
+        margin: 0 5px;
+        &:before {
+          display: none;
+        }
+      }
+    }
+    h4 {
+       border: 1px solid #e7e7e7;
+       color: #262626;
+       font-family: RalewayMedium, Arial, sans-serif;
+       font-size: 2em;
+       text-transform: uppercase;
+       padding: 30px;
+       text-align: center;
+      transition: all .5s ease-in-out;
+       span {
+         @extend .paragraph-text;
+         display: block;
+         margin-top: 20px;
+         font-size: 16px;
+         text-transform: none;
+         color: #505050;
+       }
+     }
+    &:hover {
+      .photo {
+        background-image: none!important;
+        transition: all 1s ease-in-out;
+        .hexagon {
+          visibility: visible;
+          opacity: 1;
+          transition: opacity .5s ease-in-out;
+        }
+      }
+      h4 {
+        color: #ff0036;
+        border: 1px solid #262626;
+      }
     }
   }
 }

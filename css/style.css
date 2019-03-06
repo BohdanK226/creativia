@@ -9,18 +9,29 @@
 body {
   font-size: 10px; }
 
-.paragraph-text, header .slider .carousel-inner .item p, section.about h3, section.about .panel-group .panel .panel-body, .our-products h3, .clients h3 {
+.paragraph-text, header .slider .carousel-inner .item p, section.about .panel-group .panel .panel-body, .team .row > div h4 span {
   font-family: LatoRegular, Arial, sans-serif;
   font-size: 1.6em;
   line-height: 1.6em; }
-  .paragraph-text span, header .slider .carousel-inner .item p span, section.about h3 span, section.about .panel-group .panel .panel-body span, .our-products h3 span, .clients h3 span {
+  .paragraph-text span, header .slider .carousel-inner .item p span, section.about .panel-group .panel .panel-body span, .team .row > div h4 span span {
     color: #ff0036; }
 
 .title, section.about h2 {
   font-family: RalewayBold, Arial, sans-serif;
   font-size: 3em;
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  text-align: center; }
   .title span, section.about h2 span {
+    color: #ff0036; }
+
+.sub-titile {
+  font-family: LatoBold, Arial, sans-serif;
+  text-align: center;
+  margin-bottom: 100px;
+  font-size: 1.6em;
+  line-height: 1.6em;
+  color: #505050; }
+  .sub-titile span {
     color: #ff0036; }
 
 .button {
@@ -280,10 +291,6 @@ section.about {
   padding: 100px 0; }
   section.about h2 {
     text-align: center; }
-  section.about h3 {
-    font-family: LatoBold, Arial, sans-serif;
-    text-align: center;
-    margin-bottom: 100px; }
   section.about p {
     text-align: justify;
     margin-bottom: 40px; }
@@ -582,11 +589,6 @@ section.about {
   padding: 100px 0; }
   .our-products h2 {
     text-align: center; }
-  .our-products h3 {
-    text-align: center;
-    margin-bottom: 100px; }
-    .our-products h3 span {
-      color: #ff0036; }
   .our-products .red-list {
     display: flex;
     flex-direction: column;
@@ -719,12 +721,8 @@ section.about {
   .clients h2 {
     text-align: center;
     color: white; }
-  .clients h3 {
-    text-align: center;
-    font-family: LatoBold, Arial, sans-serif;
-    margin-bottom: 100px; }
-    .clients h3 span {
-      color: #ff0036; }
+  .clients .sub-titile {
+    color: #a4a4a4; }
   .clients h4 {
     text-align: center;
     text-transform: uppercase;
@@ -784,5 +782,55 @@ section.about {
         margin: 35px auto 0 auto; } }
     .clients .square img {
       margin-right: 10px; }
+
+.team {
+  position: relative;
+  padding: 100px 0; }
+  .team .row > div .photo {
+    height: 240px;
+    background: #262626 center center no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .team .row > div .photo .hexagon {
+      display: flex;
+      visibility: hidden;
+      opacity: 0;
+      width: 45px;
+      height: 40px;
+      background-color: white;
+      color: #ff0036;
+      font-size: 20px;
+      justify-content: center;
+      align-items: center;
+      margin: 0 5px; }
+      .team .row > div .photo .hexagon:before {
+        display: none; }
+  .team .row > div h4 {
+    border: 1px solid #e7e7e7;
+    color: #262626;
+    font-family: RalewayMedium, Arial, sans-serif;
+    font-size: 2em;
+    text-transform: uppercase;
+    padding: 30px;
+    text-align: center;
+    transition: all .5s ease-in-out; }
+    .team .row > div h4 span {
+      display: block;
+      margin-top: 20px;
+      font-size: 16px;
+      text-transform: none;
+      color: #505050; }
+  .team .row > div:hover .photo {
+    background-image: none !important;
+    transition: all 1s ease-in-out; }
+    .team .row > div:hover .photo .hexagon {
+      visibility: visible;
+      opacity: 1;
+      transition: opacity .5s ease-in-out; }
+  .team .row > div:hover h4 {
+    color: #ff0036;
+    border: 1px solid #262626; }
 
 /*# sourceMappingURL=style.css.map */
