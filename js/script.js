@@ -186,7 +186,7 @@ $(document).ready(function () {
     });
 
     var $page = $('html, body');
-    $('a[href*="#"]').click(function() {
+    $('header nav a[href*="#"]').click(function() {
         $page.animate({
             scrollTop: $($.attr(this, 'href')).offset().top
         }, 1500);
