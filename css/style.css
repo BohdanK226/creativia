@@ -9,11 +9,11 @@
 body {
   font-size: 10px; }
 
-.paragraph-text, header .slider .carousel-inner .item p, section.about .panel-group .panel .panel-body, .team .row > div h4 span, .plans .row > div ul li, .follow .wrapper .hex-wrap {
+.paragraph-text, header .slider .carousel-inner .item p, section.about .panel-group .panel .panel-body, .team .row > div h4 span, .plans .row > div ul li, .follow .wrapper .hex-wrap, footer .map form, .copyright {
   font-family: LatoRegular, Arial, sans-serif;
   font-size: 1.6em;
   line-height: 1.6em; }
-  .paragraph-text span, header .slider .carousel-inner .item p span, section.about .panel-group .panel .panel-body span, .team .row > div h4 span span, .plans .row > div ul li span, .follow .wrapper .hex-wrap span {
+  .paragraph-text span, header .slider .carousel-inner .item p span, section.about .panel-group .panel .panel-body span, .team .row > div h4 span span, .plans .row > div ul li span, .follow .wrapper .hex-wrap span, footer .map form span, .copyright span {
     color: #ff0036; }
 
 .title, section.about h2 {
@@ -864,7 +864,7 @@ section.about {
       padding: 25px 0;
       text-align: center;
       text-transform: uppercase; }
-    .skills .row > div .paragraph-text, .skills .row > div header .slider .carousel-inner .item p, header .slider .carousel-inner .item .skills .row > div p, .skills .row > div section.about .panel-group .panel .panel-body, section.about .panel-group .panel .skills .row > div .panel-body, .skills .team .row > div h4 span, .team .skills .row > div h4 span, .skills .plans .row > div ul li, .plans .skills .row > div ul li, .skills .row > div .follow .wrapper .hex-wrap, .follow .wrapper .skills .row > div .hex-wrap {
+    .skills .row > div .paragraph-text, .skills .row > div header .slider .carousel-inner .item p, header .slider .carousel-inner .item .skills .row > div p, .skills .row > div section.about .panel-group .panel .panel-body, section.about .panel-group .panel .skills .row > div .panel-body, .skills .team .row > div h4 span, .team .skills .row > div h4 span, .skills .plans .row > div ul li, .plans .skills .row > div ul li, .skills .row > div .follow .wrapper .hex-wrap, .follow .wrapper .skills .row > div .hex-wrap, .skills .row > div footer .map form, footer .map .skills .row > div form, .skills .row > div .copyright {
       text-align: center;
       max-width: 160px;
       margin: auto;
@@ -1091,5 +1091,75 @@ section.about {
         background-color: transparent;
         border-bottom: 1px solid  #ff0036;
         border-top: 1px solid  #ff0036; }
+
+footer .map {
+  position: relative;
+  padding-top: 100px; }
+  @media screen and (max-width: 991px) {
+    footer .map {
+      padding-bottom: 50px; } }
+  footer .map form {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    max-width: 470px;
+    -webkit-box-shadow: -9px 9px 45px -14px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -9px 9px 45px -14px rgba(0, 0, 0, 0.75);
+    box-shadow: -9px 9px 45px -14px rgba(0, 0, 0, 0.75);
+    background-color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-self: center;
+    padding: 45px 50px; }
+    @media screen and (max-width: 991px) {
+      footer .map form {
+        position: relative;
+        left: auto;
+        bottom: auto;
+        margin: 50px auto auto auto;
+        border: 1px solid #e7e7e7; } }
+    @media screen and (max-width: 575px) {
+      footer .map form {
+        padding: 10px 15px; } }
+    footer .map form h3 {
+      font-family: RalewayMedium, Arial, sans-serif;
+      font-size: 20px;
+      color: #262626;
+      text-transform: uppercase;
+      margin-bottom: 90px; }
+    footer .map form input {
+      padding: 10px 15px;
+      border: 1px solid #e7e7e7;
+      margin-bottom: 15px; }
+    footer .map form textarea {
+      padding: 10px 15px;
+      resize: none;
+      height: 90px;
+      border: 1px solid #e7e7e7;
+      margin-bottom: 25px; }
+    footer .map form button {
+      background-color: black;
+      align-self: flex-end;
+      border: none;
+      padding: 10px 30px;
+      text-transform: uppercase;
+      color: white; }
+
+.copyright {
+  color: #8e8e8e;
+  background-color: #262626;
+  padding: 30px 40px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; }
+  @media screen and (max-width: 575px) {
+    .copyright {
+      padding: 30px 10px; } }
+  .copyright a {
+    margin: 0 auto; }
+  .copyright div {
+    flex-shrink: 0; }
 
 /*# sourceMappingURL=style.css.map */

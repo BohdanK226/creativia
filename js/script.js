@@ -177,4 +177,11 @@ $(document).ready(function () {
             follow_viewed = true;
         }
     });
+    var footer_viewed = false;
+    $(window).scroll(function () {
+        if ((($(document).scrollTop()) > ((parseFloat($('footer').offset().top)) - parseFloat($(window).height()))) && (!(footer_viewed))) { //if page skrolling
+            $('footer').addClass('animated fadeInUp slow');
+            footer_viewed = true;
+        }
+    });
 });
