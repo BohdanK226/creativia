@@ -1171,7 +1171,6 @@ section.about {
       .photo {
         background-image: none !important;
         transition: all 1s ease-in-out;
-
         .hexagon {
           visibility: visible;
           opacity: 1;
@@ -1400,7 +1399,7 @@ section.about {
 }
 
 .blog {
-  padding: 100px 0 130px 0;
+  padding: 100px 0 120px 0;
   .arrow-down {
     color: #a2a2a2;
     background: #f2f2f2;
@@ -1423,6 +1422,7 @@ section.about {
           width: 100%;
           background-color: rgba(255,255,255, 0.5);
           display: block;
+          transition: opacity 1s 1s;
         }
       }
       .button {
@@ -1468,6 +1468,85 @@ section.about {
         padding: 15px 20px;
         font-size: 16px;
         font-family: LatoRegular, Arial, sans-serif;
+        transition: background-color .3s ease-in-out;
+      }
+    }
+  }
+}
+
+.follow.after-line {
+  &:after {
+    background-color: #ff0036;
+  }
+
+  &:before {
+    content: url(../images/hex-red.png);
+  }
+}
+
+.follow {
+  position: relative;
+  padding: 100px 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../images/follow-bg.jpg") center top no-repeat;
+  background-size: cover;
+
+  h2 {
+    color: white;
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    .hex-wrap {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      align-items: center;
+      @extend .paragraph-text;
+      color: white;
+      @include max-screen(592px) {
+        width: 50%;
+        margin-bottom: 20px;
+      }
+    }
+    .hex-small:hover .hexagon-inside:before,
+    .hex-small:hover .hexagon-inside:after,
+    .hex-small:hover:after,
+    .hex-small:hover:before,
+    .hex-small:hover .hexagon-text {
+      background-color: #ff0036;
+      color: white;
+    }
+
+    h2 {
+      font-size: 20px;
+      text-transform: uppercase;
+      margin: 35px 0;
+    }
+
+    p {
+      text-align: center;
+    }
+
+
+    .hex-small {
+      margin: 0 45px 40px 45px;
+      background-color: transparent;
+      .hexagon-text {
+        color: #ff0036;
+      }
+      &:before {
+        background-color: transparent;
+      }
+      &:after {
+        background-color: transparent;
+      }
+      .hexagon-inside,.hexagon-inside:after, .hexagon-inside:before {
+        background-color: transparent;
+        border-bottom: 1px solid  #ff0036;
+        border-top: 1px solid  #ff0036;
       }
     }
   }

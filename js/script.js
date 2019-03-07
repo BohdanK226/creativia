@@ -99,4 +99,82 @@ $(document).ready(function () {
             circle_viewed = true;
         }
     });
+
+    var services_viewed = false;
+    $(window).scroll(function () {
+        if ((($(document).scrollTop()) > ((parseFloat($('.services').offset().top)) - parseFloat($(window).height()))) && (!(services_viewed))) { //if page skrolling
+            $('.services').addClass('animated fadeInUp slow');
+            services_viewed = true;
+        }
+    });
+    var about_viewed = false;
+    $(window).scroll(function () {
+        if ((($(document).scrollTop()) > ((parseFloat($('.about').offset().top)) - parseFloat($(window).height()))) && (!(about_viewed))) { //if page skrolling
+            $('.about').addClass('animated fadeInUp slow');
+            about_viewed = true;
+        }
+    });
+    var portfolio_viewed = false;
+    $(window).scroll(function () {
+        if ((($(document).scrollTop()) > ((parseFloat($('.portfolio').offset().top)) - parseFloat($(window).height()))) && (!(portfolio_viewed))) { //if page skrolling
+            $('.portfolio').addClass('animated fadeInUp slow');
+            portfolio_viewed = true;
+        }
+    });
+    var products_viewed = false;
+    $(window).scroll(function () {
+        if ((($(document).scrollTop()) > ((parseFloat($('.our-products').offset().top)) - parseFloat($(window).height()))) && (!(products_viewed))) { //if page skrolling
+            $('.our-products').addClass('animated fadeInUp slow');
+            products_viewed = true;
+        }
+    });
+    var clients_viewed = false;
+    $(window).scroll(function () {
+        if ((($(document).scrollTop()) > ((parseFloat($('.clients').offset().top)) - parseFloat($(window).height()))) && (!(clients_viewed))) { //if page skrolling
+            $('.clients').addClass('animated fadeInUp slow');
+            clients_viewed = true;
+        }
+    });
+    var team_viewed = false;
+    $(window).scroll(function () {
+        if ((($(document).scrollTop()) > ((parseFloat($('.team').offset().top)) - parseFloat($(window).height()))) && (!(team_viewed))) { //if page skrolling
+            $('.team').addClass('animated fadeInUp slow');
+            team_viewed = true;
+        }
+    });
+    var skills_viewed = false;
+    $(window).scroll(function () {
+        if ((($(document).scrollTop()) > ((parseFloat($('.skills').offset().top)) - parseFloat($(window).height()))) && (!(skills_viewed))) { //if page skrolling
+            $('.skills').addClass('animated fadeInUp slow');
+            skills_viewed = true;
+        }
+    });
+    var plans_viewed = false;
+    $(window).scroll(function () {
+        if ((($(document).scrollTop()) > ((parseFloat($('.plans').offset().top)) - parseFloat($(window).height()))) && (!(plans_viewed))) { //if page skrolling
+            $('.plans').addClass('animated fadeInUp slow');
+            plans_viewed = true;
+        }
+    });
+    var twitter_viewed = false;
+    $(window).scroll(function () {
+        if ((($(document).scrollTop()) > ((parseFloat($('.twitter').offset().top)) - parseFloat($(window).height()))) && (!(twitter_viewed))) { //if page skrolling
+            $('.twitter').addClass('animated fadeInUp slow');
+            twitter_viewed = true;
+        }
+    });
+    var blog_viewed = false;
+    $(window).scroll(function () {
+        if ((($(document).scrollTop()) > ((parseFloat($('.blog').offset().top)) - parseFloat($(window).height()))) && (!(blog_viewed))) { //if page skrolling
+            $('.blog').addClass('animated fadeInUp slow');
+            blog_viewed = true;
+        }
+    });
+    var follow_viewed = false;
+    $(window).scroll(function () {
+        if ((($(document).scrollTop()) > ((parseFloat($('.follow').offset().top)) - parseFloat($(window).height()))) && (!(follow_viewed))) { //if page skrolling
+            $('.follow').addClass('animated fadeInUp slow');
+            follow_viewed = true;
+        }
+    });
 });
