@@ -9,6 +9,9 @@
 body {
   font-size: 10px; }
 
+.ie_edge_style:before {
+  display: none !important; }
+
 .paragraph-text, header .slider .carousel-inner .item p, section.about .panel-group .panel .panel-body, .team .row > div h4 span, .plans .row > div ul li, .follow .wrapper .hex-wrap, footer .map form, .copyright {
   font-family: LatoRegular, Arial, sans-serif;
   font-size: 1.6em;
@@ -120,6 +123,11 @@ body {
   bottom: -11px;
   left: 50%;
   margin-left: -11px; }
+
+.red-line.after-line:after {
+  background-color: #ff0036; }
+.red-line.after-line:before {
+  content: url(../images/hex-red.png); }
 
 a {
   color: inherit; }
@@ -582,11 +590,6 @@ section.about {
   .portfolio .row-2 > div:nth-child(4) {
     background-color: #e08464; }
 
-.portfolio.after-line:after {
-  background-color: #ff0036; }
-.portfolio.after-line:before {
-  content: url(../images/hex-red.png); }
-
 .our-products {
   padding: 100px 0; }
   .our-products h2 {
@@ -708,11 +711,6 @@ section.about {
         height: 69.5%;
         left: 17%;
         top: 21%; }
-
-.clients.after-line:after {
-  background-color: #ff0036; }
-.clients.after-line:before {
-  content: url(../images/hex-red.png); }
 
 .clients {
   position: relative;
@@ -870,11 +868,6 @@ section.about {
       margin: auto;
       color: #505050; }
 
-.services.after-line:after {
-  background-color: #ff0036; }
-.services.after-line:before {
-  content: url(../images/hex-red.png); }
-
 .services {
   position: relative;
   padding: 100px 0;
@@ -960,11 +953,6 @@ section.about {
         text-transform: uppercase;
         transition: all .3s ease-in-out; }
 
-.twitter.after-line:after {
-  background-color: #ff0036; }
-.twitter.after-line:before {
-  content: url(../images/hex-red.png); }
-
 .twitter {
   position: relative;
   padding: 100px 0;
@@ -1037,11 +1025,6 @@ section.about {
       font-size: 16px;
       font-family: LatoRegular, Arial, sans-serif;
       transition: background-color .3s ease-in-out; }
-
-.follow.after-line:after {
-  background-color: #ff0036; }
-.follow.after-line:before {
-  content: url(../images/hex-red.png); }
 
 .follow {
   position: relative;

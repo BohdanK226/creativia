@@ -17,6 +17,10 @@ body {
   font-size: 10px;
 }
 
+.ie_edge_style:before {
+  display: none!important;
+}
+
 .paragraph-text {
   font-family: LatoRegular, Arial, sans-serif;
   font-size: 1.6em;
@@ -153,6 +157,15 @@ body {
     margin-left: -11px;
   }
 }
+.red-line.after-line {
+  &:after {
+    background-color: #ff0036;
+  }
+
+  &:before {
+    content: url(../images/hex-red.png);
+  }
+}
 
 a {
   color: inherit;
@@ -192,6 +205,14 @@ a {
     -webkit-clip-path: polygon(25% 0, 27% 0, 2% 50%, 27% 100%, 25% 100%, 0 50%, 25% 0, 75% 0, 100% 50%, 75% 100%, 73% 100%, 98% 50%, 73% 0);
     background-color: white;
   }
+
+  //@media all and (-ms-high-contrast:none)
+  //{
+  //  &:before{
+  //    display: none;
+  //  } /* IE10 */
+  //  *::-ms-backdrop:before {display: none } /* IE11 */
+  //}
 }
 
 header {
@@ -812,16 +833,6 @@ section.about {
   }
 }
 
-.portfolio.after-line {
-  &:after {
-    background-color: #ff0036;
-  }
-
-  &:before {
-    content: url(../images/hex-red.png);
-  }
-}
-
 .our-products {
   padding: 100px 0;
 
@@ -999,16 +1010,6 @@ section.about {
       }
 
     }
-  }
-}
-
-.clients.after-line {
-  &:after {
-    background-color: #ff0036;
-  }
-
-  &:before {
-    content: url(../images/hex-red.png);
   }
 }
 
@@ -1231,16 +1232,6 @@ section.about {
   }
 }
 
-.services.after-line {
-  &:after {
-    background-color: #ff0036;
-  }
-
-  &:before {
-    content: url(../images/hex-red.png);
-  }
-}
-
 .services {
   position: relative;
   padding: 100px 0;
@@ -1366,16 +1357,6 @@ section.about {
   }
 }
 
-.twitter.after-line {
-  &:after {
-    background-color: #ff0036;
-  }
-
-  &:before {
-    content: url(../images/hex-red.png);
-  }
-}
-
 .twitter {
   position: relative;
   padding: 100px 0;
@@ -1471,16 +1452,6 @@ section.about {
         transition: background-color .3s ease-in-out;
       }
     }
-  }
-}
-
-.follow.after-line {
-  &:after {
-    background-color: #ff0036;
-  }
-
-  &:before {
-    content: url(../images/hex-red.png);
   }
 }
 

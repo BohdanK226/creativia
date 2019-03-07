@@ -184,4 +184,17 @@ $(document).ready(function () {
             footer_viewed = true;
         }
     });
+
+    var $page = $('html, body');
+    $('a[href*="#"]').click(function() {
+        $page.animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 1500);
+        return false;
+    });
+
+    if (/MSIE 10/i.test(navigator.userAgent) || /MSIE 9/i.test(navigator.userAgent) || /rv:11.0/i.test(navigator.userAgent) || /Edge\/\d./i.test(navigator.userAgent))
+    {$('.about .hexagon').each(function () {
+        $(this).addClass('ie_edge_style');
+    })}
 });
