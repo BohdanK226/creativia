@@ -1145,4 +1145,17 @@ footer .map {
   .copyright div {
     flex-shrink: 0; }
 
+@media all and (-ms-high-contrast: none) {
+  .copyright {
+    justify-content: space-around; }
+
+  a {
+    margin: 0; }
+
+  /* IE10 */
+  *::-ms-backdrop a {
+    margin: 0; }
+
+  /* IE11 */ }
+
 /*# sourceMappingURL=style.css.map */
