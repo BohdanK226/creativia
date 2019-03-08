@@ -109,8 +109,8 @@ $(document).ready(function () {
     });
     var about_viewed = false;
     $(window).scroll(function () {
-        if ((($(document).scrollTop()) > ((parseFloat($('.about').offset().top)) - parseFloat($(window).height()))) && (!(about_viewed))) { //if page skrolling
-            $('.about').addClass('animated fadeInUp slow');
+        if ((($(document).scrollTop()) > ((parseFloat($('.about .half').offset().top)) - parseFloat($(window).height()))) && (!(about_viewed))) { //if page skrolling
+            $('.about .half').addClass('animated fadeInUp slow');
             about_viewed = true;
         }
     });
