@@ -177,6 +177,9 @@ header {
       position: relative;
       flex-shrink: 0;
       z-index: 1; }
+      @media screen and (max-width: 575px) {
+        header nav .logo {
+          transform: scale(0.7) translate(-30px, 0); } }
       header nav .logo img {
         position: absolute; }
     header nav .mobile-menu {
@@ -225,9 +228,10 @@ header {
         text-decoration: none;
         display: block;
         position: relative; }
-        @media screen and (max-width: 1090px) {
+        @media screen and (max-width: 1101px) {
           header nav ul li a {
-            padding: 20px 9px; } }
+            padding: 20px 9px;
+            font-size: 1.7em; } }
         header nav ul li a:hover {
           color: #ffffff;
           text-decoration: none; }

@@ -228,7 +228,9 @@ header {
       position: relative;
       flex-shrink: 0;
       z-index: 1;
-
+      @include max-screen(575px) {
+        transform: scale(.7) translate(-30px, 0);
+      }
       img {
         position: absolute;
       }
@@ -288,8 +290,9 @@ header {
         display: block;
         position: relative;
 
-        @include max-screen(1090px) {
+        @include max-screen(1101px) {
           padding: 20px 9px;
+          font-size: 1.7em;
         }
 
         &:hover {
